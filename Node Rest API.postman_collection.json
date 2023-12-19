@@ -1,0 +1,407 @@
+{
+	"info": {
+		"_postman_id": "049a9187-7b88-4d7d-baf2-db4d39f6a977",
+		"name": "Node Rest API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "5677823"
+	},
+	"item": [
+		{
+			"name": "Movies",
+			"item": [
+				{
+					"name": "Create movies",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"title\":\"some title\",\n   \"genre\":\"some genre\",\n   \"rating\":3,\n   \"streamLink\":\"skds\",\n   \"isAdmin\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4500/movie",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"movie"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create movies",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"title\":\"some title\",\n   \"genre\":\"some genre\",\n   \"rating\":3,\n   \"streamLink\":\"skds\",\n   \"isAdmin\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4500/movie",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4500",
+									"path": [
+										"movie"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": \"New video posted by admin\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get all movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4500/movies",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"movies"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get all movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4500/movies",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4500",
+									"path": [
+										"movies"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"data\": [\r\n        {\r\n            \"_id\": \"65818f5ece3154174843cb41\",\r\n            \"title\": \"The Lord of the Rings\",\r\n            \"genre\": \"J.R.R. Tolkien\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T12:41:02.641Z\",\r\n            \"updatedAt\": \"2023-12-19T12:41:02.641Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"658173b8ea947d17842e9c1a\",\r\n            \"title\": \"some title\",\r\n            \"genre\": \"adadsd\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T10:43:04.499Z\",\r\n            \"updatedAt\": \"2023-12-19T11:00:10.274Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"65817392bd695e2b7cf466e6\",\r\n            \"title\": \"some title\",\r\n            \"genre\": \"some genre\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T10:42:26.439Z\",\r\n            \"updatedAt\": \"2023-12-19T10:42:26.439Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"65817391bd695e2b7cf466e5\",\r\n            \"title\": \"some title\",\r\n            \"genre\": \"some genre\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T10:42:25.080Z\",\r\n            \"updatedAt\": \"2023-12-19T10:42:25.080Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"6581738fbd695e2b7cf466e4\",\r\n            \"title\": \"some title\",\r\n            \"genre\": \"some genre\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T10:42:23.670Z\",\r\n            \"updatedAt\": \"2023-12-19T10:42:23.670Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"65816c4a8247710590e5289c\",\r\n            \"title\": \"some title\",\r\n            \"genre\": \"some genre\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T10:11:22.071Z\",\r\n            \"updatedAt\": \"2023-12-19T10:11:22.071Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"65816c0d5570f85abcb36217\",\r\n            \"title\": \"some title\",\r\n            \"genre\": \"some genre\",\r\n            \"rating\": 3,\r\n            \"createdAt\": \"2023-12-19T10:10:21.477Z\",\r\n            \"updatedAt\": \"2023-12-19T10:10:21.477Z\",\r\n            \"__v\": 0\r\n        },\r\n        {\r\n            \"_id\": \"65816b3172151c479c169cbf\",\r\n            \"__v\": 0\r\n        }\r\n    ]\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Get movies",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4500/movie/658173b8ea947d17842e9c1a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"movie",
+								"658173b8ea947d17842e9c1a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get movies",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4500/movie/658173b8ea947d17842e9c1a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4500",
+									"path": [
+										"movie",
+										"658173b8ea947d17842e9c1a"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"_id\": \"658173b8ea947d17842e9c1a\",\n        \"title\": \"some title\",\n        \"genre\": \"adadsd\",\n        \"rating\": 3,\n        \"createdAt\": \"2023-12-19T10:43:04.499Z\",\n        \"updatedAt\": \"2023-12-19T11:00:10.274Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete movies",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4500/movies/65816c4a8247710590e5289c?isAdmin=ss",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"movies",
+								"65816c4a8247710590e5289c"
+							],
+							"query": [
+								{
+									"key": "isAdmin",
+									"value": "ss"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Delete movies",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4500/movies/65816c4a8247710590e5289c?isAdmin=ss",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4500",
+									"path": [
+										"movies",
+										"65816c4a8247710590e5289c"
+									],
+									"query": [
+										{
+											"key": "isAdmin",
+											"value": "ss"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\r\n    \"data\": \"Only admin have access\"\r\n}"
+						}
+					]
+				},
+				{
+					"name": "Update movies",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"title\":\"some title\",\n   \"genre\":\"adadsd\",\n   \"rating\":3,\n   \"streamLink\":\"skds\",\n   \"isAdmin\":true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:4500/movies/658173b8ea947d17842e9c1a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"movies",
+								"658173b8ea947d17842e9c1a"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update movies",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"title\":\"some title\",\n   \"genre\":\"adadsd\",\n   \"rating\":3,\n   \"streamLink\":\"skds\",\n   \"isAdmin\":true\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:4500/movies/658173b8ea947d17842e9c1a",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4500",
+									"path": [
+										"movies",
+										"658173b8ea947d17842e9c1a"
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						}
+					]
+				},
+				{
+					"name": "search with title and genre",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:4500/search?title=title&genre=data",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "4500",
+							"path": [
+								"search"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "title"
+								},
+								{
+									"key": "genre",
+									"value": "data"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "search with title and genre",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:4500/search?title=title&genre=data",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "4500",
+									"path": [
+										"search"
+									],
+									"query": [
+										{
+											"key": "title",
+											"value": "title"
+										},
+										{
+											"key": "genre",
+											"value": "data"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"name": "Content-Type",
+									"description": "",
+									"type": "text"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"_id\": \"6581982a1937832ae45b2e72\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:18:34.320Z\",\n            \"updatedAt\": \"2023-12-19T13:18:34.320Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581982a1937832ae45b2e73\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:18:34.347Z\",\n            \"updatedAt\": \"2023-12-19T13:18:34.357Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819a034357fb5b2c108876\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:26:27.666Z\",\n            \"updatedAt\": \"2023-12-19T13:26:27.666Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819b966fd26b6900e75515\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:33:10.902Z\",\n            \"updatedAt\": \"2023-12-19T13:33:10.902Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819b986fd26b6900e75516\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:33:12.227Z\",\n            \"updatedAt\": \"2023-12-19T13:33:12.227Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819b996fd26b6900e75517\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:33:13.885Z\",\n            \"updatedAt\": \"2023-12-19T13:33:13.885Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819c600c03f66414655598\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:36:32.642Z\",\n            \"updatedAt\": \"2023-12-19T13:36:32.674Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819cc94841e10e744f3bec\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:38:17.514Z\",\n            \"updatedAt\": \"2023-12-19T13:38:17.514Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819d21848f6b298cda89b1\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:39:45.216Z\",\n            \"updatedAt\": \"2023-12-19T13:39:45.216Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819da059f3be4430eb9811\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:41:52.307Z\",\n            \"updatedAt\": \"2023-12-19T13:41:52.339Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819e6ceec6b23cbc3d4a55\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:45:16.101Z\",\n            \"updatedAt\": \"2023-12-19T13:45:16.101Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819e831446004bbc7ecf5e\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:45:39.681Z\",\n            \"updatedAt\": \"2023-12-19T13:45:39.681Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819ed88bcedb249854b640\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:47:04.583Z\",\n            \"updatedAt\": \"2023-12-19T13:47:04.583Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819f19199abf25d0f7f4bf\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:48:09.442Z\",\n            \"updatedAt\": \"2023-12-19T13:48:09.442Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819f19199abf25d0f7f4c0\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:48:09.452Z\",\n            \"updatedAt\": \"2023-12-19T13:48:09.459Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819f8b80e50e3854e1f6f8\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:50:03.133Z\",\n            \"updatedAt\": \"2023-12-19T13:50:03.133Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"65819f8b80e50e3854e1f6f9\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:50:03.143Z\",\n            \"updatedAt\": \"2023-12-19T13:50:03.148Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581a03b2e04d45828c687c2\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:52:59.931Z\",\n            \"updatedAt\": \"2023-12-19T13:52:59.931Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581a03b2e04d45828c687c3\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:52:59.940Z\",\n            \"updatedAt\": \"2023-12-19T13:52:59.945Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581a1b26263064a4469ca20\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:59:14.490Z\",\n            \"updatedAt\": \"2023-12-19T13:59:14.490Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581a1b26263064a4469ca21\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T13:59:14.499Z\",\n            \"updatedAt\": \"2023-12-19T13:59:14.503Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581aaab05066629d4d1daf9\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:37:31.618Z\",\n            \"updatedAt\": \"2023-12-19T14:37:31.618Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581aaab05066629d4d1dafa\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:37:31.626Z\",\n            \"updatedAt\": \"2023-12-19T14:37:31.631Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581aaccbff16c3e7cec30b3\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:38:04.054Z\",\n            \"updatedAt\": \"2023-12-19T14:38:04.054Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581aaccbff16c3e7cec30b4\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:38:04.063Z\",\n            \"updatedAt\": \"2023-12-19T14:38:04.067Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581aaeb43f05b61a8add7af\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:38:35.068Z\",\n            \"updatedAt\": \"2023-12-19T14:38:35.068Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581aaeb43f05b61a8add7b0\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:38:35.075Z\",\n            \"updatedAt\": \"2023-12-19T14:38:35.081Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581ab280297924cf0851e41\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:39:36.474Z\",\n            \"updatedAt\": \"2023-12-19T14:39:36.474Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581ab280297924cf0851e42\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:39:36.483Z\",\n            \"updatedAt\": \"2023-12-19T14:39:36.488Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581ab541b5c656aecb96828\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:40:20.184Z\",\n            \"updatedAt\": \"2023-12-19T14:40:20.184Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581ab541b5c656aecb96829\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:40:20.192Z\",\n            \"updatedAt\": \"2023-12-19T14:40:20.196Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581abc026ed350364818d60\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:42:08.383Z\",\n            \"updatedAt\": \"2023-12-19T14:42:08.383Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581abc026ed350364818d61\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:42:08.391Z\",\n            \"updatedAt\": \"2023-12-19T14:42:08.398Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581abdf987d0b69b8d1338e\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:42:39.480Z\",\n            \"updatedAt\": \"2023-12-19T14:42:39.480Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581abdf987d0b69b8d1338f\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:42:39.487Z\",\n            \"updatedAt\": \"2023-12-19T14:42:39.493Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581acd297e1316550a32e13\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:46:42.996Z\",\n            \"updatedAt\": \"2023-12-19T14:46:42.996Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581acd397e1316550a32e14\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:46:43.006Z\",\n            \"updatedAt\": \"2023-12-19T14:46:43.011Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581ad4a60bafb5b80e47d56\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:48:42.489Z\",\n            \"updatedAt\": \"2023-12-19T14:48:42.489Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"6581ad4a60bafb5b80e47d57\",\n            \"title\": \"some title\",\n            \"genre\": \"some genre\",\n            \"rating\": 3,\n            \"createdAt\": \"2023-12-19T14:48:42.498Z\",\n            \"updatedAt\": \"2023-12-19T14:48:42.505Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
