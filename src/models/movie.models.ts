@@ -26,7 +26,7 @@ const movieSchema = new Schema(
     rating: {
       type: Schema.Types.Number,
     },
-    StreamLink: {
+    streamLink: {
       type: Schema.Types.String,
     },
   },
